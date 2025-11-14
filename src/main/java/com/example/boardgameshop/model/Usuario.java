@@ -32,13 +32,13 @@ public class Usuario {
     @Column(nullable = false, length = 100)
     private String password;
 
-    @OneToOne(mappedBy = "usuario")
+    @OneToOne
     private Carrito carrito;
 
-    @OneToMany(mappedBy = "usuario")
+    @OneToMany
     private java.util.List<Resenia> resenias;
 
-    @OneToMany(mappedBy = "usuario")
+    @OneToMany
     private java.util.List<Rol> roles;
 
 }
