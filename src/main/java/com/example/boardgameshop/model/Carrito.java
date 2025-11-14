@@ -19,8 +19,8 @@ public class Carrito {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    
-    @OneToMany(mappedBy = "carrito")
+
+    @OneToMany
     private List<Producto> productos;
     private Double total;
 
