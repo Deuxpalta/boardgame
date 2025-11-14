@@ -49,7 +49,7 @@ public class ReseniaController {
 	public Resenia updateResenia(@PathVariable Long id, @RequestBody Resenia resenia) {
 		Resenia existing = reseniaService.getReseniaById(id);
 		if (existing != null) {
-			existing.setDescripcion(resenia.getDescripcion());
+			existing.setContenido(resenia.getContenido());
 			return reseniaService.saveResenia(existing);
 		}
 		return null;
@@ -60,8 +60,8 @@ public class ReseniaController {
 	public Resenia partiallyUpdateResenia(@PathVariable Long id, @RequestBody Resenia resenia) {
 		Resenia existing = reseniaService.getReseniaById(id);
 		if (existing != null) {
-			if (resenia.getDescripcion() != null) {
-				existing.setDescripcion(resenia.getDescripcion());
+			if (resenia.getContenido() != null) {
+				existing.setContenido(resenia.getContenido());
 			}
 			return reseniaService.saveResenia(existing);
 		}
