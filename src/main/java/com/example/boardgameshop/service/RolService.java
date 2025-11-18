@@ -19,13 +19,11 @@ public class RolService {
         return rolRepository.findAll();
     }
 
-    @SuppressWarnings("null")
     public Rol findById(Integer id) {
         return rolRepository.findById(id).orElse(null);
     }
 
-    @SuppressWarnings("null")
     public Rol save(Rol rol) {
         return rolRepository.save(rol);
-    } 
+    }
 }

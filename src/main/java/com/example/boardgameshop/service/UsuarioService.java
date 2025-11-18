@@ -19,12 +19,10 @@ public class UsuarioService {
         return usuarioRepository.findAll();
     }
 
-    @SuppressWarnings("null")
     public Usuario findById(Long id) {
         return usuarioRepository.findById(id).orElse(null);
     }
 
-    @SuppressWarnings("null")
     public Usuario save(Usuario usuario) {
         return usuarioRepository.save(usuario);
     }
