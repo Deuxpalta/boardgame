@@ -19,12 +19,10 @@ public class CarritoService {
         return carritoRepository.findAll();
     }
 
-    @SuppressWarnings("null")
     public Carrito findById(Long id) {
         return carritoRepository.findById(id).orElse(null);
     }
 
-    @SuppressWarnings("null")
     public Carrito save(Carrito carrito) {
         return carritoRepository.save(carrito);
     }

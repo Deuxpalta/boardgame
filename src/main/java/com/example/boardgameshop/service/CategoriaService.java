@@ -19,12 +19,10 @@ public class CategoriaService {
         return categoriaRepository.findAll();
     }
 
-    @SuppressWarnings("null")
     public Categoria findById(Long id) {
         return categoriaRepository.findById(id).orElse(null);
     }
 
-    @SuppressWarnings("null")
     public Categoria save(Categoria categoria) {
         return categoriaRepository.save(categoria);
     }
